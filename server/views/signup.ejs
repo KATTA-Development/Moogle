@@ -1,0 +1,45 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+</head>
+<body>
+  <div id="sign-up-container">
+    <form action="/signup" method="post" >
+      <div class="user">
+        <label for="username">Username: </label>
+        <input type="text" name="username">
+      </div>
+      <div class="pwd">
+        <label for="password">Password: </label>
+        <input type="text" name="password">
+      </div>
+      <div class="email">
+        <label for="email">Email: </label>
+        <input type="text" name="email">
+      </div>
+      <div class="buttons">
+        <input type="submit" value="Create User">
+        <button class='login'><a href='/login'>Back to Login</a></button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
+
+<!-- <html>
+<head>
+  <meta charset="UTF-8">
+  <title>Unit-10-Authentication</title>
+</head>
+<body>
+  Login
+  <form method="POST" action='/login'>
+    <input name="username" type="text" placeholder="username"></input>
+    <input name="password" type="password" placeholder="password"></input>
+    <input type='submit' value="login">
+  </form>
+  <a href='./signup'>Sign up</a>
+</body>
+</html>
+ -->

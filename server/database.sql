@@ -1,5 +1,12 @@
 CREATE DATABASE movienite; -- this is unnecessary when using ElephantSQL to create a server
-
+-- psql -d postgres://pormceeh:RRvvyuXrfYH_cQNdkK4Pks0JrreSdqLT@ziggy.db.elephantsql.com:5432/pormceeh -f database.sql
+/* https://www.postgresqltutorial.com/postgresql-create-table/ */
+CREATE TABLE users_table(
+    _id serial PRIMARY KEY, /* serial: merely a notational convenience for creating unique identifier columns */
+    username varchar UNIQUE NOT NULL,
+    "password" varchar NOT NULL,
+    email varchar NOT NULL
+)
 
 -- cast and genre columns may need to be reconfigured to accommodate multiple values
 CREATE TABLE savedMovies(
@@ -26,6 +33,6 @@ CREATE TABLE savedMovies(
     trailer_link VARCHAR(255)
 );
 
-inception: tt1375666
-edngame: tt4154796
-sicario: tt3397884
+-- inception: tt1375666
+-- edngame: tt4154796
+-- sicario: tt3397884

@@ -24,7 +24,7 @@ class MoviesDisplay extends Component {
           <img src="https://media2.giphy.com/media/iGpkO05xWTl17Vhq6Y/giphy.gif"/></div>);
     return(
       <div>
-      <h1>{title}</h1>
+      <h1 className="centerText">{title}</h1>
         <div className="MoviesDisplay">
           { tiles }
         </div>

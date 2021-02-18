@@ -1,0 +1,33 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+</head>
+<body>
+  <div id="sign-up-container">
+    <!-- action: the URL that processes the form submission -->
+    <form action="/login" method="post" autocomplete="off">
+      <div class = 'inputs'>
+
+        <div class= "header">
+          <h1>Welcome to Moogle</h1>
+          <h3>Your next movie searching experience</h3>
+        </div>
+
+        <div class = "userPass">
+          <label for = "username">Username:  </label>
+          <input name="username" type="text" placeholder="username" class="user"></input>
+          <label for = "password">Password:  </label> 
+          <input name="password" type="password" placeholder="password" class= "pass"></input>
+        </div>
+
+        <div class = "buttons">
+          <button id = "login" type = "submit">Login</button>
+          <button class = "sign"><a href='/signup'>Sign up</a></button>
+        </div>
+
+      </div>
+    </form>
+  </div>
+</body>
+</html>

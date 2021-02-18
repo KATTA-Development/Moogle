@@ -12,7 +12,7 @@ savedMovieController.findTitleAndId = (req, res, next) => {
     url: 'https://movie-database-imdb-alternative.p.rapidapi.com/',
     params: {s: `${req.params.title}`, page: '1-2', r: 'json'},
     headers: {
-      'x-rapidapi-key': '47549ac224msh5a74db6a2cff7c9p1ed3ddjsn058880310a4c',
+      'x-rapidapi-key': '081dbdf260msh363bc0cda44327ep16cc20jsnbd0bdd18459b',
       'x-rapidapi-host': 'movie-database-imdb-alternative.p.rapidapi.com'
     }
   };
@@ -38,7 +38,7 @@ savedMovieController.selectTitle = (req, res, next) => {
     url: 'https://movie-database-imdb-alternative.p.rapidapi.com/',
     params: {i: `${req.params.imdbid}`, r: 'json'},
     headers: {
-      'x-rapidapi-key': '47549ac224msh5a74db6a2cff7c9p1ed3ddjsn058880310a4c',
+      'x-rapidapi-key': '081dbdf260msh363bc0cda44327ep16cc20jsnbd0bdd18459b',
       'x-rapidapi-host': 'movie-database-imdb-alternative.p.rapidapi.com'
     }
   };
@@ -73,7 +73,7 @@ savedMovieController.getTrailer = (req, res, next) => {
   axios.request(options)
     .then(response => {
       // console.log(response.data);
-      res.locals.filmDetails.trailer = `youtu.be/${response.data.youtube_trailer_key}`;
+      res.locals.filmDetails.trailer = `youtube.com/embed/${response.data.youtube_trailer_key}`;
       return next();
     })
     .catch(err => {

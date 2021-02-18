@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "bundle.js",
-    publicPath: "/",
+    publicPath: "/build/",
   },
   mode: process.env.NODE_ENV,
   module: {
@@ -27,14 +27,17 @@ module.exports = {
     ]
   },
   devServer: {
-    contentBase: path.join(__dirname, "client/"),
+    // contentBase: path.join(__dirname, "client/"),
     port: 8080,
-    publicPath: "http://localhost:8080/build",
+    publicPath: "/build",
     proxy: {
       '/api': {
         target: 'http://localhost:3000',
         secure: false,
-      }
+      },
+      '/': 'http://localhost:3000',
+      '/signup': 'http://localhost:3000',
+      '/login': 'http://localhost:3000',
     },
     hot: true,
     historyApiFallback: true

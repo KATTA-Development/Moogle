@@ -11,6 +11,7 @@ body {
 .MoviesDisplay {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
   font-family: 'merriweather';
   align-items: center;
   font-size: x-large;
@@ -34,6 +35,12 @@ body {
 
 }
 
+.trailer-button {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
 .App {
   width: 80%;
   margin-left: auto;
@@ -53,13 +60,20 @@ body {
 }
 
 .search-input {
-  width: 600px;
+  min-width: 33vw;
+  max-width: 600px;
   height: 30px;
+  border-radius: 4px;
+  justify-content: space-between;
+  margin-right: 10px;
 }
 
 .SearchButton {
   width: 70px;
-  height: 36px;
+  height: 32px;
+  color: #4A4A4A;
+  border-radius: 4px;
+  transition: background 0.3s ease;
 }
 
 .home-div {
@@ -71,7 +85,7 @@ body {
 }
 
 .home-logo {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   font-size: 3em;
 }
 
@@ -85,15 +99,52 @@ body {
 }
 
 .SavedMoviesLink {
-  border: 2px solid #d8dadd;
-  color: #d8dadd;
-  padding: 5px;
-  text-decoration: none;
+  // border: 2px solid #d8dadd;
+  // color: #d8dadd;
+  // padding: 5px;
+  // text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: lighter;
+    opacity: 0.6;
+    transition: opacity 0.3s ease;
+    max-height: 25px;
+}
+
+.SavedMoviesLink:hover {
+  opacity: 1;
 }
 
 .SavedMoviesLink a:visited {
   color: #d8dadd;
   text-decoration: none;
+  
+}
+
+.SavedMoviesLink a {
+  color: #d8dadd;
+  text-decoration: none;
+}
+
+.SavedMoviesLinkText {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 8px;
+}
+
+.SavedMoviesLinkAlignItems {
+  display: flex;
+  justify-content: space-around;
+  align-items: center !important;
+}
+
+.adjustHeartIcon {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2px;
 }
 
 .tile-poster {
@@ -113,4 +164,49 @@ body {
 
 .no-results h3 {
   font-size: 20px;
+}
+
+.trailer-Modal-transparent {
+  background-color: rgba(0,0,0, 0.5) !important;
+}
+
+#trailer-Modal-center {
+  display: flex;
+  align-items: center;
+}
+
+.modal-dialog {
+    /* For responsive */
+    max-width:90%;
+     min-width:600px;
+}
+
+.moogle-logo {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.moogle-blue {
+  color: #4081EC;
+}
+
+.moogle-red {
+  color: #E34133;
+}
+
+.moogle-yellow {
+  color: #F3B607;
+}
+
+.moogle-green {
+  color: #32A350;
+}
+
+#movie-logo-png img {
+  max-width: 75px;
+  max-height: 75px;
+}
+
+.centerText {
+  text-align: center;
+  margin-bottom: 20px;
 }

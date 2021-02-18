@@ -125,7 +125,7 @@ class App extends Component {
       <Router>
         <div className="App">
         <Switch>
-          <Route path='/' exact render={() => <Home 
+          <Route path='/login' exact render={() => <Home 
             query={this.state.query} 
             updateQuery={this.updateQuery} 
             querySearch={this.querySearch}
