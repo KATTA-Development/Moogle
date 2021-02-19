@@ -28,7 +28,7 @@ function Home(props){
       <div className="home-div">
         {/* <div className="home-logo"><img src="../movienitelogo.png"></img></div> */}
         <div id="movie-logo-png">
-            <img src="../movie-logo.png"></img>
+        <img src="../movie-logo.png" alt=""/>
         </div>
         <div className="home-logo moogle-logo">
           <span className="moogle-blue">M</span>
