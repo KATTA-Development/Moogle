@@ -27,7 +27,7 @@ module.exports = {
     ]
   },
   devServer: {
-    // contentBase: path.join(__dirname, "client/"),
+    contentBase: path.join(__dirname, "client/"),
     port: 8080,
     publicPath: "/build",
     proxy: {

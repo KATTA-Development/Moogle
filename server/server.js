@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 const express = require('express');
 const PORT = 3000;
 const app = express();
@@ -20,20 +21,24 @@ app.use(express.urlencoded({ extended: true }));
 /* MIGHT NEED TO CHANGE PATH HERE (85% sure)
 user will be sent to the login page
 
-Serve initial static index.html front page */
-app.use(express.static(path.resolve(__dirname, '../build')));
-// app.use(express.static(path.resolve(__dirname, '../client')));
+// Serve initial static index.html front page */
+app.use(express.static(path.resolve(__dirname, '../client')));
+// app.use(express.static(path.resolve(__dirname, '../build')));
+
 
 /*********** SIGN UP BEG **************/
 // create an endpoint where user signs up
-app.get('/', (req, res) => {
-  // send to ejs file where user will be prompted to give username & pwd
-  console.log('Getting response');
-  res.render('login', {error: null});
-})
+
+
 
 app.get('/signup', (req, res) => {
   res.render('signup', {error: null});
+})
+
+app.get('/', (req, res) => {
+  // send to ejs file where user will be prompted to give username & pwd
+  console.log('Getting response');
+  res.redirect('/login')
 })
 
 // verify successful sign up?
