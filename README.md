@@ -1,4 +1,4 @@
-# movienite
+# Moogle
 
 **Description**
 Moogle is an application for movie lovers who want to search their favorite movies. You are able to watch movie trailers and save them to your favorite’s list to watch later! Moogle conveniently includes details about each movie and IMBd and Rotten Tomatoes ratings.
